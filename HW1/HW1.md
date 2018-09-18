@@ -1,4 +1,4 @@
-** Assignment 1 **
+**Assignment 1**
 
 **Question:** Open 1 startup and solve problem!!!
 
