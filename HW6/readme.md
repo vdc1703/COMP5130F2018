@@ -27,4 +27,6 @@ Link confirmed Ex: http://weblab.cs.uml.edu/~cvu/COMP5130/HW6/users.php?act=lost
 - Register is not working. Somehow CAPTCHA is not working with weblab. I will remove it to make it simple and easy for everyone can register.
 
 
-Summary: Right now, all I did is just a template and basic functions for Image Gallery. There are many bugs need to fix. Belong that, I plan to use bootstrap to make the website look better and it also can help the website run on Mobile Devices.
+**Summary**
+
+Right now, all I did is just a template and basic functions for Image Gallery. There are many bugs need to fix. Belong that, I plan to use bootstrap to make the website look better and it also can help the website run on Mobile Devices.
