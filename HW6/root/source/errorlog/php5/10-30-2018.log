@@ -1,0 +1,7 @@
+====================================================================
+Time Encountered: October 30, 2018, 3:49:47 PM
+Error Type: Unknown Error (Error #64)
+Error String: require_once(): Failed opening required 'D:\xampp\htdocs\vdc/source/language/tools.php' (include_path='.;D:\xampp\php\PEAR')
+Error File: D:\xampp\htdocs\vdc\tools.php
+Error Line: 4
+====================================================================
