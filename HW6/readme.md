@@ -13,13 +13,13 @@
 
 - The reset password is working. It will send a temporary password to your email and waiting for the confirm link is clicked. When the confirm link is clicked, server will check if the url link is correct with the auth_key and then it will update the password (MD5). 
 
-Website
+**Website**
 <p align="center"><img src="https://github.com/vdc1703/COMP5130F2018/blob/master/HW6/ResetPass1.JPG" /></p>
 
-In database
+**In database**
 <p align="center"><img src="https://github.com/vdc1703/COMP5130F2018/blob/master/HW6/ResetPass2.JPG" /></p>
 
-Email Confirm
+**Email Confirm**
 <p align="center"><img src="https://github.com/vdc1703/COMP5130F2018/blob/master/HW6/ResetPass3.JPG" /></p>
 
 Link confirmed Ex: http://weblab.cs.uml.edu/~cvu/COMP5130/HW6/users.php?act=lost_password-a&id=00d4bd053fca85cc8c772afd88a3a515
