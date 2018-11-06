@@ -1,6 +1,6 @@
 **Chuong Vu**
 
-**Assignment 2**
+**Week 2**
 
 **Reason:**
 
