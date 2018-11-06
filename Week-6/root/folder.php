@@ -640,7 +640,7 @@ class Folder
 				$display_height=$folder_icon_max_size;
 			}
 
-			$str_ret="<table align=\"center\" background=\"folder.png\" width=\"128\" height=\"128\"border=\"0\">"
+			$str_ret="<table align=\"center\" background=\"img/folder.png\" width=\"128\" height=\"128\"border=\"0\">"
 					."<tr>\n<td align=\"center\" valign=\"middle\">\n";
 			if ($link_is_preview)		
 				$str_ret.="<a href=\"".CookiesLikeMakeLink("?display=".removeSlashes($dir)."&width=".$img_preview_landscape_width."&height=".$img_preview_landscape_height)."\">\n";			
@@ -654,9 +654,9 @@ class Folder
 		{
 			// show default folder icon
 			if ($link_is_preview)
-				$str_ret="<a href=\"".CookiesLikeMakeLink("?display=".removeSlashes($dir)."&width=".$img_preview_landscape_width."&height=".$img_preview_landscape_height)."\"><img src=\"folder.png\" border=\"0\" alt=\"".$folder_caption." ".getLastPath($dir)."\" /></a>";			
+				$str_ret="<a href=\"".CookiesLikeMakeLink("?display=".removeSlashes($dir)."&width=".$img_preview_landscape_width."&height=".$img_preview_landscape_height)."\"><img src=\"img/folder.png\" border=\"0\" alt=\"".$folder_caption." ".getLastPath($dir)."\" /></a>";			
 			else				
-				$str_ret="<a href=\"".CookiesLikeMakeLink("?dir=".removeSlashes($dir))."\"><img src=\"folder.png\" border=\"0\" alt=\"".$folder_caption." ".getLastPath($dir)."\" /></a>";
+				$str_ret="<a href=\"".CookiesLikeMakeLink("?dir=".removeSlashes($dir))."\"><img src=\"img/folder.png\" border=\"0\" alt=\"".$folder_caption." ".getLastPath($dir)."\" /></a>";
 		}
 		return 	$str_ret;
 	}	
