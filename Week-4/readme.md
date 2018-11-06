@@ -20,6 +20,7 @@ I was able to get the user from database that I created. Also, user page is crea
 I still playing with PHP and dymanic feature that PHP bring here. However, what I see is this is too simple and the source code will not work for a bigger project. I have to redesign the database and also I will based on some template that I see on the internet to help me out.
 
 **Next**
+
 For each user, I be able to get all the file from the folders. My goal next is get only the image file on each table and build a tree for all the file. My consider now is how do I store the tree?
 
 - I'm thinking of storing every link of image to the MySQL database but this will grow up fast and I don't think the database can be able to store all like millions of pictures.
