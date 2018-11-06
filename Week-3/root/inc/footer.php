@@ -1,6 +1,6 @@
 <!--Display footer-->
         <div id="footer">   
-                <p>Under Development &copy; 2018 Chuong Vu - COMP5130 Internet Web System I</p>
+                <p>Under Development &copy; 2018 Chuong Vu - 91.61 Internet Web System I</p>
                 <p>This page is valid 
                     <a href="http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvdc1703.github.io%2FGUI-1%2Findex.html+&profile=css3&usermedium=all&warning=1&vextwarning=&lang=en"><img style="border:0;width:4%" src="img/valid-css.png" alt="Valid CSS!"></a> 
                     and

@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<!--
 
--->
 
 <html lang="en-US">
     <head>
@@ -18,7 +16,6 @@
         <div id='header' class="container-fluid"> 
             <!-- header container -->
             <div class='text-header'>
-
             </div>
         </div>
 
