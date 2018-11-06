@@ -20,7 +20,7 @@
                     echo "<a href='". $page_url . "/user.php?id=" . $row["username"]. "'>" . $row["username"] . "</a>  ";
                 }
             } else {
-                echo "0 resu123lts";
+                echo "Can't find user name";
             }
             
 
