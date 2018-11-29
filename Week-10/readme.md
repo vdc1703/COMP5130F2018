@@ -8,11 +8,7 @@ Weblab link: http://weblab.cs.uml.edu/~cvu/COMP5130/Week-10/root/
 
 **Completed**
 
-- Finished Login/Logout
-- Register Added
-- Upload Added
-- User Control Panel Added
-- Changed Password Added
+ - Solved the Server PHP 5.5
 
 **Problem**
 
