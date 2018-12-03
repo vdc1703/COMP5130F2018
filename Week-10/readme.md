@@ -8,16 +8,37 @@ Weblab link: http://weblab.cs.uml.edu/~cvu/COMP5130/Week-10/root/
 
 **Completed**
 
- - Solved the Server PHP 5.5
+- Upload image (max size to 10MB)
+- User Control Pannel
+- Create Album
+- Move image to Album
+
+HomePage
+
+<p align="center"><img src="https://github.com/vdc1703/COMP5130F2018/tree/master/Week-10/images/homepage.JPG" /></p>
+
+Database Album
+
+<p align="center"><img src="https://github.com/vdc1703/COMP5130F2018/tree/master/Week-10/images/database_album.JPG" /></p>
+
 
 **Problem**
 
-The Weblab.cs.uml.edu server is currently run PHP 5.4. This is cause me a trouble to run the upload file and alsoe save file to directory. Moreover, the server is seem like not let me upload the file.
+For the upload file to the server. It only limited to max size is 2MB. 
 
 **Problem Solving**
 
-I worked with Tuyen, who is System Manger of CS Deparment. He helped me update the PHP 5.4 to PHP 5.5 on server which helped me solved one problem. Other problem is save the upload file which I still working on to see any thing else I can do.
+upload_max_filesize=2M to upload_max_filesize=10
+
+At first I thought my code is wrong but after few days troubleshoot. I know that I need to config the PHP server.
+I change the upload_max_filesize=2M to upload_max_filesize=10M in php.ini so the problem solved
 
 **Next**
 
+- Will be add Slide Show
+- Check Admin/Member user
 
+
+**Note**
+
+Somehow on Weblab do not allow user to use .htaccess. The website works fine on my localhost host but I got "Forbidden" on the Weblab due to .htaccess.
