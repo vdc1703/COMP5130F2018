@@ -27,4 +27,3 @@ http://weblab.cs.uml.edu/~cvu/COMP5130/Week-11/root/
 
 http://weblab.cs.uml.edu/~cvu/COMP5130/Week-12/root/
 
-http://weblab.cs.uml.edu/~cvu/COMP5130/Final-Powerpoint/
