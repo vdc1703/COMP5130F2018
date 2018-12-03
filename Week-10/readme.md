@@ -28,7 +28,7 @@ For the upload file to the server. It only limited to max size is 2MB.
 
 **Problem Solving**
 
-upload_max_filesize=2M to upload_max_filesize=10
+upload_max_filesize=2M to upload_max_filesize=10M
 
 At first I thought my code is wrong but after few days troubleshoot. I know that I need to config the PHP server.
 I change the upload_max_filesize=2M to upload_max_filesize=10M in php.ini so the problem solved
