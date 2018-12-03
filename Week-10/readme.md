@@ -15,11 +15,11 @@ Weblab link: http://weblab.cs.uml.edu/~cvu/COMP5130/Week-10/root/
 
 HomePage
 
-<p align="center"><img src="https://github.com/vdc1703/COMP5130F2018/tree/master/Week-10/images/homepage.JPG" /></p>
+<p align="center"><img src="https://github.com/vdc1703/COMP5130F2018/blob/master/Week-10/images/homepage.JPG" /></p>
 
 Database Album
 
-<p align="center"><img src="https://github.com/vdc1703/COMP5130F2018/tree/master/Week-10/images/database_album.JPG" /></p>
+<p align="center"><img src="https://github.com/vdc1703/COMP5130F2018/blob/master/Week-10/images/database_album.JPG" /></p>
 
 
 **Problem**
