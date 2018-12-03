@@ -15,11 +15,11 @@ Weblab link: http://weblab.cs.uml.edu/~cvu/COMP5130/Week-10/root/
 
 HomePage
 
-<p align="center"><img src="https://github.com/vdc1703/COMP5130F2018/tree/master/Week-10/images/homepage.JPG" /></p>
+<p align="center"><img src="https://github.com/vdc1703/COMP5130F2018/blob/master/Week-10/images/homepage.JPG" /></p>
 
 Database Album
 
-<p align="center"><img src="https://github.com/vdc1703/COMP5130F2018/tree/master/Week-10/images/database_album.JPG" /></p>
+<p align="center"><img src="https://github.com/vdc1703/COMP5130F2018/blob/master/Week-10/images/database_album.JPG" /></p>
 
 
 **Problem**
@@ -28,7 +28,7 @@ For the upload file to the server. It only limited to max size is 2MB.
 
 **Problem Solving**
 
-upload_max_filesize=2M to upload_max_filesize=10
+upload_max_filesize=2M to upload_max_filesize=10M
 
 At first I thought my code is wrong but after few days troubleshoot. I know that I need to config the PHP server.
 I change the upload_max_filesize=2M to upload_max_filesize=10M in php.ini so the problem solved
