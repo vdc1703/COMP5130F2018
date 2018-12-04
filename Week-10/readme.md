@@ -37,7 +37,7 @@ I change the upload_max_filesize=2M to upload_max_filesize=10M in php.ini so the
 
 - Will be add Slide Show
 - Check Admin/Member user
-
+- When delete, only delete in database. The uploaded file on server is still there. This will need to be fix.
 
 **Note**
 

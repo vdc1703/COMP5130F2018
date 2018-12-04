@@ -21,7 +21,7 @@
             </li>            
             <li class="dropdown nav-item">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    Welcome <?php echo $logged_usergroup.' '.$logged_username; ?>
+                    Welcome <?php echo $logged_usergroup.' - '.$logged_username; ?>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
                     <li>
