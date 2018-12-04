@@ -27,8 +27,9 @@ Weblab link: http://weblab.cs.uml.edu/~cvu/COMP5130/Week-11/root/
 
 **Next**
 
+    - Bug on delete albums and images. Will be fixed
     - Re-work on upload. Allow to drag and drop.
 
 **Note**
 
-Somehow on Weblab do not allow user to use .htaccess. The website works fine on my localhost host but I got "Forbidden" on the Weblab due to .htaccess.
+Somehow on Weblab do not allow user to use .htaccess. The website works fine on my localhost host but I got "Forbidden" on the Weblab due to .htaccess. This will also be fix on final.
