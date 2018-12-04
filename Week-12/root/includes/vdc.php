@@ -6,7 +6,10 @@ define('DS',DIRECTORY_SEPARATOR);
 
 $root_path = ROOT_PATH;       
 
+// MySQL config
 require_once "{$root_path}includes/config.php";
+
+// use to create thumbnail if it have not been created
 require_once "{$root_path}includes/simpleimage.php";
 
 $msg = "";    
