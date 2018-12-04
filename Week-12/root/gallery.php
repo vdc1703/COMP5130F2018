@@ -38,8 +38,8 @@ if ($isauthor || $isadmin) {
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['submit-data'])) {
     switch ($_POST['submit-data']) {
-          case 'createAlbum':    			
-    			$album_name = htmlspecialchars(mysqli_real_escape_string($conn,$_POST['album-name']));
+          case 'createAlbum':               
+                $album_name = htmlspecialchars(mysqli_real_escape_string($conn,$_POST['album-name']));
                 
                 $sql = "SELECT album_id FROM tbl_album WHERE album_title = '$album_name' AND user_id = $userid LIMIT 1;";
                 $result = mysqli_query($conn,$sql);
@@ -50,7 +50,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 } else {
                     $sql_insert = "INSERT INTO tbl_album (album_title, user_id) VALUES ('$album_name', $userid);";
                     mysqli_query($conn,$sql_insert);
-                    echo '<script>window.location.href="gallery.php?name='.$user_name.'"</script>';	
+                    echo '<script>window.location.href="gallery.php?name='.$user_name.'"</script>'; 
                 }
                 break;
           case 'deleteImages':
@@ -58,12 +58,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                     // $user_images = implode(",", $_POST["user_images"]);
                     $user_images = array_filter($_POST["user_images"]);
                     if(!empty($user_images)){
-			    foreach ($user_images as $user_image) {
-        					unlink($root_path.upload_path.$user_image);
-        					$sql= "DELETE FROM `tbl_img` WHERE `img_name` = '$user_image';";
+                foreach ($user_images as $user_image) {
+                            unlink($root_path.upload_path.$user_image);
+                            $sql= "DELETE FROM `tbl_img` WHERE `img_name` = '$user_image';";
                             mysqli_query($conn,$sql);
-        				}                    
-                        echo '<script>window.location.href="gallery.php?name='.$user_name.'"</script>';	
+                        }                    
+                        echo '<script>window.location.href="gallery.php?name='.$user_name.'"</script>'; 
                     }
                 }
                 break;
@@ -73,11 +73,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                     // $user_images = implode(",", $_POST["user_images"]);
                     $user_images = array_filter($_POST["user_images"]);
                     if(!empty($user_images)){
-        				foreach ($user_images as $user_image) {
-        					$sql= "UPDATE `tbl_img` SET album_id = $select_album WHERE `img_name` = '$user_image';";
+                        foreach ($user_images as $user_image) {
+                            $sql= "UPDATE `tbl_img` SET album_id = $select_album WHERE `img_name` = '$user_image';";
                             mysqli_query($conn,$sql);
-        				}                    
-                        echo '<script>window.location.href="gallery.php?name='.$user_name.'"</script>';	
+                        }                    
+                        echo '<script>window.location.href="gallery.php?name='.$user_name.'"</script>'; 
                     }
                 }
                 break;
@@ -208,23 +208,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
       </div>
     </div>            
     <?php 
-    if(isset($_POST['deleteAlbum'])){
-        // sql to delete a record
-        $delete_id = $_POST['delete_id'];
-        $sql = "DELETE FROM tbl_album WHERE album_id='$delete_id' ";
-        mysqli_query($conn,$sql);
-        $sql = "UPDATE `tbl_img` SET album_id = 0 WHERE album_id = '$delete_id';";
-        mysqli_query($conn,$sql);
-        echo '<script>window.location.href="gallery.php?name='.$user_name.'"</script>';	
-    }
-    if(isset($_POST['renameAlbum'])){
-        // sql to delete a record
-        $rename_id = $_POST['rename_id'];
-        $album_name = $_POST['album_name'];
-        $sql = "UPDATE `tbl_album` SET album_title = '$album_name' WHERE album_id = '$rename_id';";
-        mysqli_query($conn,$sql);
-        echo '<script>window.location.href="gallery.php?name='.$user_name.'"</script>';	
-    }        
+        if(isset($_POST['deleteAlbum'])){
+            // sql to delete a record
+            $delete_id = $_POST['delete_id'];
+            $sql = "DELETE FROM tbl_album WHERE album_id='$delete_id' ";
+            mysqli_query($conn,$sql);
+            $sql = "UPDATE `tbl_img` SET album_id = 0 WHERE album_id = '$delete_id';";
+            mysqli_query($conn,$sql);
+            echo '<script>window.location.href="gallery.php?name='.$user_name.'"</script>'; 
+        }
+        if(isset($_POST['renameAlbum'])){
+            // sql to delete a record
+            $rename_id = $_POST['rename_id'];
+            $album_name = $_POST['album_name'];
+            $sql = "UPDATE `tbl_album` SET album_title = '$album_name' WHERE album_id = '$rename_id';";
+            mysqli_query($conn,$sql);
+            echo '<script>window.location.href="gallery.php?name='.$user_name.'"</script>'; 
+        }        
     } ?>
 <?php } ?>  
 </div>
@@ -348,7 +348,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $image_name = $_POST['image_name'];
         $sql = "UPDATE `tbl_img` SET img_title = '$image_name' WHERE img_id = '$rename_id';";
         mysqli_query($conn,$sql);
-        echo '<script>window.location.href="gallery.php?name='.$user_name.'"</script>';	
+        echo '<script>window.location.href="gallery.php?name='.$user_name.'"</script>'; 
     }        
     } ?>
 <?php } ?>
