@@ -41,14 +41,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
           case 'createAlbum':    			
     			$album_name = htmlspecialchars(mysqli_real_escape_string($conn,$_POST['album-name']));
                 
-                $sql = "SELECT album_id FROM tbl_album WHERE album_title = '$album_name' AND user_id = $logged_userid LIMIT 1;";
+                $sql = "SELECT album_id FROM tbl_album WHERE album_title = '$album_name' AND user_id = $userid LIMIT 1;";
                 $result = mysqli_query($conn,$sql);
                 $total = mysqli_num_rows($result); 
                 
                 if ($total == 1) {
                     $msg = $album_name." is exist, please choose another album name";
                 } else {
-                    $sql_insert = "INSERT INTO tbl_album (album_title, user_id) VALUES ('$album_name', $logged_userid);";
+                    $sql_insert = "INSERT INTO tbl_album (album_title, user_id) VALUES ('$album_name', $userid);";
                     mysqli_query($conn,$sql_insert);
                     echo '<script>window.location.href="gallery.php?name='.$user_name.'"</script>';	
                 }
@@ -58,7 +58,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                     // $user_images = implode(",", $_POST["user_images"]);
                     $user_images = array_filter($_POST["user_images"]);
                     if(!empty($user_images)){
-        				foreach ($user_images as $user_image) {
+			    foreach ($user_images as $user_image) {
         					unlink($root_path.upload_path.$user_image);
         					$sql= "DELETE FROM `tbl_img` WHERE `img_name` = '$user_image';";
                             mysqli_query($conn,$sql);
@@ -99,7 +99,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $album_title = $row_album['album_title'];      
     ?>
     <div class="col-lg-3 col-md-4 col-xs-6 gallery-item" id="dynamic<?php echo $album_id; ?>">
-        <div class="item album">
+<!-- Delete album -->
+        <div class="item album" id="dynamicAlbum<?php echo $album_id; ?>">
             <?php 
                 $sql_album_img = "SELECT * FROM `tbl_img` WHERE user_id = $userid AND album_id = $album_id";
                 $result_album_img = mysqli_query($conn,$sql_album_img);
@@ -130,7 +131,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         <?php } ?>       
     </div>
     <script type="text/javascript">
-    $('#dynamic<?php echo $album_id; ?>').on('click', function() {
+    $('#dynamicAlbum<?php echo $album_id; ?>').on('click', function() {
      
         $(this).lightGallery({
             dynamic: true,
@@ -327,9 +328,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     if(isset($_POST['deleteImage'])){
         // sql to delete a record
         $delete_id = $_POST['delete_id'];
-        $sql = "DELETE FROM tbl_img WHERE img_id='$delete_id' ";
+        
+        $sql_delete_img_name = "SELECT img_name FROM tbl_img WHERE img_id='$delete_id' LIMIT 1";
+        $result_delete_img_name = mysqli_query($conn,$sql_delete_img_name);
+        $row_delete_img_name = mysqli_fetch_array($result_delete_img_name,MYSQLI_ASSOC);
+        $delete_img_name = $row_delete_img_name['img_name'];
+        // delete file from folder and thumbnail
+        unlink($root_path.upload_path.$delete_img_name);
+        unlink($root_path."cache/thumb_300_300_".$delete_img_name);
+        unlink($root_path."cache/thumb_100_100_".$delete_img_name);
+        // delete from database
+        $sql = "DELETE FROM tbl_img WHERE img_id='$delete_id'";
         mysqli_query($conn,$sql);
-        echo '<script>window.location.href="gallery.php?name='.$user_name.'"</script>';	
+        echo '<script>window.location.href="gallery.php?name='.$user_name.'"</script>';
     }
     if(isset($_POST['renameImage'])){
         // sql to delete a record

@@ -1,7 +1,7 @@
 <?php
     /* DEBUG INFORMATION */
 	ini_set("log_errors", 1);
-	ini_set("display_errors", 1);
+	ini_set("display_errors", 0);
     																					  													  
 	/* DATABASE INFORMATION */
 	if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {

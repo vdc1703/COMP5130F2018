@@ -1,9 +1,12 @@
 <IfModule mod_rewrite.c>
 
+    Options +FollowSymLinks +Indexes
     RewriteEngine On
-   
-    RewriteBase /
-    RewriteRule ^gallery/([a-zA-Z0-9]+)$ /gallery.php?name=$1 [L]
+
+    # For localhost, use the /
+    # RewriteBase /
+    RewriteBase /~cvu/COMP5130/Week-12/root/
+    RewriteRule ^gallery/([a-zA-Z0-9]+)$ gallery.php?name=$1 [L]
     
     # remove .php; use THE_REQUEST to prevent infinite loops
     RewriteCond %{HTTP_HOST} ^www\.domain\.com
@@ -11,7 +14,7 @@
     RewriteRule (.*)\.php$ $1 [R=301]
     
     # remove index
-    RewriteRule (.*)index$ $1 [R=301]
+     RewriteRule (.*)index$ $1 [R=301]
     
     # remove slash if not directory
     RewriteCond %{REQUEST_FILENAME} !-d

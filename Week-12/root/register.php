@@ -35,6 +35,12 @@ require_once "./template/site_body.php";
         <label for="password">Password</label>
         <input type="password" class="form-control" name="password" id="password" placeholder="Password" />
     </div>
+<!--    This will be for future update
+    <div class="form-group">
+        <label for="password">Email</label>
+        <input type="text" class="form-control" name="email" id="email" placeholder="email" />
+    </div>
+-->
     <button type="submit" class="btn btn-primary">Register</button>   
 </form>
 <div style = "font-size:14px; color:#CC0000; margin-top:10px; text-align: center;"><?php echo $msg; ?></div>
