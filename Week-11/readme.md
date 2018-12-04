@@ -27,8 +27,8 @@ Weblab link: http://weblab.cs.uml.edu/~cvu/COMP5130/Week-11/root/
 
 **Next**
 
-    - Bug on delete albums and images. Will be fixed
-    - Re-work on upload. Allow to drag and drop.
+- Bug on delete albums and images. Will be fixed
+- Re-work on upload. Allow to drag and drop.
 
 **Note**
 
