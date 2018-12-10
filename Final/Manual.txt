@@ -1,0 +1,26 @@
+This is instruction how to configure the Gallery Website.
+
+1. Source Web
+	- Copy all file in the root directory to your host.
+
+2. Database
+	- Import the img.sql to database.
+
+3. Configuration
+	- site_header.php in tempplate directory.
+		+ At line 8, change the <base href="localhost"/> to correct domain name.
+		
+	- config.php in includes directory.
+		+ Config correct database information.
+		
+	- .htaccess
+		+ At line 7. Change the RewriteBase command to correct domain. 
+			Ex: RewriteBase / (localhost or domain name)
+				#RewriteBase /~cvu/COMP5130/Week-12/root/ (On share host with username)
+	
+	- CHMOD 777 "images" and "cache" directories.
+	
+4. Admin user and password
+	Username: admin
+	Password: 123
+	Note: You can change by login to database and update the MD5 password.
